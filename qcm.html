@@ -1,0 +1,119 @@
+ <link rel="stylesheet" type="text/css" href="reponseqcm.js">
+
+<style type="text/css">
+     body {
+        font-size: 18px; 
+        background-color: lightgray;
+        text-align: center;
+        border: solid black;
+    }
+    H1{
+        text-align: center;
+    }
+    p{
+        font-weight : bold;
+    }
+</style>
+ <body>
+        <H1>Q.C.M</H1>
+    <form action="/ma-page-de-traitement" method="post">
+
+        <div>
+        <p>Combien de ballon d'or a Messi ?</p>
+           
+            <input type="checkbox" id="reponse1" value="rep1">
+            <label for="rep1 ">6</label> 
+            <input type="checkbox" id="reponse2" value="rep2">
+            <label for="rep2">7</label>
+            <input type="checkbox" id="reponse3" value="rep3">
+            <label for="rep3">8</label>
+        </div>
+        <div>
+        <p>Quel joueur a joue en equipe de france en 1998?  </p>
+           
+            <input type="checkbox" id="reponse4" value="rep4">
+            <label for="rep4 ">Zidane</label> 
+            <input type="checkbox" id="reponse5" value="rep5">
+            <label for="rep5">mbappe</label>
+            <input type="checkbox" id="reponse6" value="rep6">
+            <label for="rep6">kante</label>
+        </div>
+        <div>
+        <p>Dans quelle club joue Neymar ?</p>
+            <input type="checkbox" id="reponse7" value="rep7">
+            <label for="rep7 ">PSG</label> 
+            <input type="checkbox" id="reponse8" value="rep8">
+            <label for="rep8">barcelone</label>
+            <input type="checkbox" id="reponse9" value="rep9">
+            <label for="rep9">real madrid</label>
+        </div>
+        <div>
+        <p>Quelle equipe a gagne la ligue des champions l'annee 2021?</p>
+            <input type="checkbox" id="reponse10" value="rep10">
+            <label for="rep10 ">La Juventus</label> 
+            <input type="checkbox" id="reponse11" value="rep11">
+            <label for="rep11">Barcelone</label>
+            <input type="checkbox" id="reponse12" value="rep12">
+            <label for="rep12">Chelsea</label>
+        </div>
+        <div>
+        <p>Quelle joueur est francais ?</p>
+            <input type="checkbox" id="reponse13" value="rep13">
+            <label for="rep13 ">Paul pogba</label> 
+            <input type="checkbox" id="reponse14" value="rep14">
+            <label for="rep14">Ryad Mahrez</label>
+            <input type="checkbox" id="reponse15" value="rep15">
+            <label for="rep15">Cristiano Ronaldo</label>
+        </div>
+        </br>
+         <div>
+        <button type="button" onclick="verifier()">Envoyer</button>
+      </div>
+    </form>   
+    <script>
+    document.querySelector('qcm.html')
+
+    function verifier(){
+        var moyenne =0;
+        var mauvaise =0;
+        if(document.getElementById('reponse2').checked==true && document.getElementById('reponse1').checked==false && document.getElementById('reponse3').checked==false){            
+            moyenne=moyenne +1;
+        }else{
+            mauvaise=mauvaise+1;
+            alert("Mauvaise reponse détecte");
+        }
+        if(document.getElementById('reponse4').checked==true && document.getElementById('reponse5').checked==false && document.getElementById('reponse6').checked==false){
+            moyenne=moyenne +1;
+        }else{
+            mauvaise=mauvaise+1;
+            alert("Mauvaise reponse détecte");
+        }
+        if(document.getElementById('reponse7').checked==true && document.getElementById('reponse8').checked==false && document.getElementById('reponse9').checked==false){
+            moyenne=moyenne +1;
+        }else{
+            mauvaise=mauvaise+1;
+            alert("Mauvaise reponse détecte");
+        }
+        if(document.getElementById('reponse12').checked==true && document.getElementById('reponse10').checked==false && document.getElementById('reponse11').checked==false){
+            moyenne=moyenne +1;
+        }else{
+            mauvaise=mauvaise+1;
+            alert("Mauvaise reponse détecte");
+        }
+        if(document.getElementById('reponse13').checked==true && document.getElementById('reponse14').checked==false && document.getElementById('reponse15').checked==false){
+            moyenne=moyenne +1;
+        }else{
+            mauvaise=mauvaise+1;
+            alert("Mauvaise reponse détecte");
+        }
+
+        
+        document.write(moyenne);
+
+
+    }
+
+
+</script>
+
+</body>         
